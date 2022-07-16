@@ -1,0 +1,115 @@
+*{
+    text-transform: capitalize;
+    text-decoration: none !important;
+}
+
+body{
+    background-image: linear-gradient(90deg ,purple , orange);
+    position: relative;
+
+}
+
+
+.nav-bar{
+    font-size: 34px;
+}
+.table{
+    background-color: black;
+    color: white;
+    margin-right: 40px;
+    padding: 5px;
+    opacity: 0.6;
+    border-radius: 14px;
+
+}
+.thumbnail{
+transition: transform .2s;
+}
+.thumbnail:hover{
+    transform: scale(1.05); 
+
+}
+
+table tbody :hover{
+    color: darkgoldenrod;
+    font-weight: bold;
+
+}
+
+td ,  th  {
+    text-align: center;
+    border:1px solid goldenrod;
+    
+}
+.col-sm-4 .thumbnail a{
+    text-decoration: none;
+}
+
+
+.main{
+    opacity: 0.6;
+
+}
+
+.page-footer{
+    height: 0.5rem;   
+    opacity: 0.6;
+    text-align :center;
+
+}
+.page-footer .box-container{
+    position: absolute;
+    bottom: -8;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: black;
+    width: 100%; 
+}
+
+.page-footer .box-container .box{
+    margin:1rem;
+    flex:1 1 30rem;
+    text-align :center;
+}
+
+.page-footer .box-container .box a{
+    font-size: 1.8rem;
+    color:#eee;
+    padding:.4rem 0;
+    display: block;
+}
+
+.page-footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:#fff;
+}
+.page-footer .box-container .box p{
+    font-size: 1.4rem;
+    color:#eee;
+    padding:1rem 0;
+}
+.footer-copyright {
+    padding-bottom: 12px;
+}
+
+@media (max-width:800px){
+    .home .content h1{
+        font-size: 40px !important;
+    }
+    .home .content p{
+        font-size: 20px !important;
+    }
+    
+}
+@media (max-width:500px) {
+    .home .content h1{
+        font-size: 40px !important;
+    }
+    .home .content p{
+        font-size: 20px !important;
+    }
+    
+
+}

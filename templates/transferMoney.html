@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block bodycontainer %}
+{% if messages %}
+<div class="alert alert-warning alert-dismissible text-center" style="font-size: 16px">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{% for message in messages %}
+        {{ message }}
+        {% endfor %}</strong>
+</div> 
+{% endif %}
+
+<style>
+    .form-group {
+        padding: 3px;
+    }
+    .form-control{
+        padding: 10px;
+        height: 50px;
+    }
+    
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-lg-12 col-md-12  d-block">
+            <h5 style="font-size:30px;text-align:center;color:rgb(2, 0, 0); font-family:'Courier New', Courier, monospace; font-weight: bolder; ">Transfer
+                Money</h5>
+                <form action="" method="post" style="text-align: center; ">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <select class="form-control" name="senderEmail" id="sender" style="color:white ; background-color: black; border:2px solid goldenrod;" required>
+                            <option class="blk" style="color:white ;" value="Select">Select Sender</option>
+                            {% for cust in customer %}
+                            <option class="blk" style="color:white" value="{{cust.email}}">{{cust.name}}: {{cust.email}}
+                                [AccBal: {{cust.currentBalance}}]</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select name="recieverEmail"  class="form-control" id="reciever" style="color:white ; background-color: black;; border:2px solid goldenrod;" required>
+                            <option class="blk" style="color:white ;" value="Select">Select Reciever</option>
+                            {% for cust in customer %}
+                            <option class="blk" style="color:white" value="{{cust.email}}">{{cust.name}}: {{cust.email}}
+                                [AccBal: {{cust.currentBalance}}]</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group ">
+                        <input  class="form-control" type="number" style="color:white ; background-color: black; ;  border:2px solid goldenrod;" size="50%"
+                         name="amount" id="amt" value="EnterAmount"  placeholder= "Enter Amount" required>
+                    </div>
+                    <button type="submit"id="but" class="btn btn-warning form-control">Transfer</button>
+                   
+                  </form>
+                
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock bodycontainer %}
