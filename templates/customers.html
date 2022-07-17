@@ -6,27 +6,30 @@
 <title>Customer Details</title>
 <div class="container">
   <div class="row">
-      <div class="col-sm-12 col-lg-12 col-md-12  d-block">
-<h1 style="text-align: center; font-weight: bolder;  font-family: 'Courier New', Courier, monospace; ">Customer Details</h1>
-<table class="table table-hover"  >
-    <thead>
-      <tr>
-        <th>AccountID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>CurrentBalance</th>
-      </tr>
-    </thead>
-    <tbody>
-        {% for i in customer %}
-      <tr>
-        <td>{{i.id}}</td>
-        <td>{{i.name}}</td>
-        <td>{{i.email}}</td>
-        <td>{{i.currentBalance}}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-      </div></div></div>
+    <div class="col-sm-12 col-lg-12 col-md-12  d-block">
+      <h1>Customer
+        Details</h1>
+      <table class="table table-hover" style="font-size: 25px;">
+        <thead>
+          <tr>
+            <th>AccountID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>CurrentBalance</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in customer %}
+          <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.currentBalance}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 {% endblock bodycontainer %}
