@@ -1,1 +1,1 @@
-web:waitress-serve --listen=*:8000 BankingSystem.wsgi:application
+web: gunicorn BankingSystem.wsgi
